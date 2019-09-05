@@ -1,0 +1,6 @@
+num = int(input("What is your favorite number? "))
+print("\nYour favorite number is " + str(num))
+print("Your favorite number doubled is " + str(num*2))
+print("Your favorite number squared is " + str(num*num))
+print("The negative of your favorite number is " + str(num*-1))
+print("The inverse of your favorite number is {:0.3f}".format(1/num))
