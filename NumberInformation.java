@@ -6,7 +6,7 @@ public class NumberInformation {
    Scanner keyboard = new Scanner(System.in);
    System.out.print("What is your favorite integer? ");
    int x = keyboard.nextInt();
-   System.out.println("You entered " + x + " as your number");
+   System.out.println("You entered " + x + " as your number.");
       if(x == 42){
          System.out.println("I like the number 42 also!");
       }         
