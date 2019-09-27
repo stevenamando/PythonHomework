@@ -6,11 +6,12 @@ import java.io.*;
 public class MaxMin{
    public static void main(String[] args) throws FileNotFoundException{
       Scanner fileIn = new Scanner(new File("input.txt"));
-      
-      int x = fileIn.nextInt();
+      int min, max;
+
+      min=max= fileIn.nextInt();
       int y = fileIn.nextInt();
       int z = fileIn.nextInt();
-            
+ /**           
       if(x == y){
          if(x > z){
             System.out.println("The max value is " + x);
@@ -40,10 +41,14 @@ public class MaxMin{
                System.out.println("The max value is " + x);
                System.out.println("The min value is " + z);
             }
-            else{
+            else if(y < z){
+                  System.out.println("The max value is " + x);
+                  System.out.println("The min value is " + y);   
+            }
+            /*else{
                System.out.println("The max value is " + x);
                System.out.println("The min value is " + y);
-            }   
+            }  
          }
          else {
             System.out.println("The max value is " + z);
@@ -72,3 +77,28 @@ public class MaxMin{
       //System.out.println("x = "+x+" y = "+y+" z = "+z); 
    }
 }
+**/
+
+      
+if (y<min || z<min){
+   if(z<y){
+      min=z;
+   }
+   else{
+      min=y;
+   }
+}
+      
+if (y>max || z>max){
+   if(z>y){
+      max=z;
+   }
+   else{
+      max=y;
+   }
+}
+System.out.println("The max value is " + max);
+System.out.println("The min value is " + min); 
+
+}}
+      
