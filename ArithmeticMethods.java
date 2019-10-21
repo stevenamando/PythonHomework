@@ -1,11 +1,11 @@
-public class testing{
+public class ArithmeticMethods{
    
    public static void main(String[] args){
       int x = add(4,2);
       int y = subtract(4,2);
       int z = multiply(x,y);
-      int a = divide(-12, -5);
-      int b = mod(-12,-5);
+      int a = divide(z,5);
+      int b = mod(z,5);
                                     //Expected output of each line
       System.out.println("x = "+x); //x = 6
       System.out.println("y = "+y); //y = 2
@@ -99,7 +99,7 @@ public class testing{
          while(b1 < remainder){
          remainder = subtract(remainder, b1);
          }
-      if(a < 0 || b < 0){
+      if(a < 0){
          return -remainder;
       }     
       return remainder;
