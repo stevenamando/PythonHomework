@@ -5,7 +5,7 @@ public class ArithmeticMethods{
       int y = subtract(4,2);
       int z = multiply(x,y);
       int a = divide(z,5);
-      int b = mod(z,5);
+      int b = mod(-12,5);
                                     //Expected output of each line
       System.out.println("x = "+x); //x = 6
       System.out.println("y = "+y); //y = 2
@@ -90,19 +90,10 @@ public class ArithmeticMethods{
    }
    
    public static int mod(int a, int b){
-      if(b == a || b == 1 || b==0){
-         return 0;
-      }
-      int a1 = abs(a);
-      int b1 = abs(b);      
-      int remainder = subtract(a1, b1);      
-         while(b1 < remainder){
-         remainder = subtract(remainder, b1);
-         }
-      if(a < 0){
-         return -remainder;
-      }     
-      return remainder;
+     int d = divide(a,b);
+     int m = multiply(d, b);
+     int result = subtract(a, m);
+     return result;
       
    }
    
